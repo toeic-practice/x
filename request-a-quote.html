@@ -254,8 +254,8 @@ document.getElementById('rfqForm').addEventListener('submit', function(e) {
     body: JSON.stringify(payload)
   })
   .then(() => {
-    alert('Thank you for your inquiry. We will contact you soon!');
-    document.getElementById('rfqForm').reset();
+    alert('Your submission was sent, but receipt could not be confirmed. If you do not receive a reply, please contact u133874@ftc.com.tw directly.');
+    // Do not clear user-entered details until the backend can confirm acceptance.
   })
   .catch(err => {
     console.error('Submission error:', err);
